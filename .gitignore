@@ -1,0 +1,16 @@
+__pycache__
+/media
+myvenv
+db.sqlite3
+.DS_Store
+orderedtable/migrations/*
+.idea/dataSources
+.idea/vcs.xml
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/inspectionProfiles
+.idea/misc.xml
+.idea/modules.xml
+.idea/StudyMonk.iml
+.idea/workspace.xml
+DjangoOrderedTable/__pycache__/

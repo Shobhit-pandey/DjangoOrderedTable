@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+    <meta charset="UTF-8">
+    {% block head %}
+    <title>Multiple Sorting</title>
+    {% endblock %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">SORT</button>
+</form>
+{% endblock %}

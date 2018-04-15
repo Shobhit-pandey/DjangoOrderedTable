@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <title>Projects</title>
+     <link rel="stylesheet" href="{% static 'css/project.css' %}" type="text/css">
+    <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+}
+    </style>
+{% endblock %}
+
+
+
+{% block body %}
+<button><a href="{% url 'orderedtable:import_json' %}">ADD DATA FROM JSON</a></button>
+<button><a href="{% url 'orderedtable:delete_table' %}">EMPTY TABLE</a></button>
+<button><a href="{% url 'orderedtable:multiple_sorting' %}">Multiple Column Sort</a></button>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <td>S NO.</td>
+        <td><a href="{% url 'orderedtable:sorted' pk='distance_a' %}">(ascending)</a>Distance<a href="{% url 'orderedtable:sorted' pk='distance_d' %}">(decending)</a></td>
+        <td><a href="{% url 'orderedtable:sorted' pk='rate_a' %}">(ascending)</a>Rate<a href="{% url 'orderedtable:sorted' pk='rate_d' %}">(decending)</a></td>
+        <td><a href="{% url 'orderedtable:sorted' pk='project_size_a' %}">(ascending)</a>Project Size<a href="{% url 'orderedtable:sorted' pk='project_size_d' %}">(decending)</a></td>
+        <td><a href="{% url 'orderedtable:sorted' pk='completion_date_a' %}">(ascending)</a>Completion date<a href="{% url 'orderedtable:sorted' pk='completion_date_d' %}">(decending)</a></td>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for list in lists %}
+    <tr>
+        <td>{{ list.s_no }}</td>
+        <td>{{ list.distance }}</td>
+        <td>{{ list.rate }}</td>
+        <td>{{ list.project_size }}</td>
+        <td>{{ list.completion_date }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}
+    <title>Import JSON Files</title>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Add JSON</button>
+</form>
+{% endblock %}
+</body>
+</html>
