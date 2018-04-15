@@ -32,11 +32,8 @@ Any new thought are always welcome here
 ```
 
 ## Authors
-
-```
-* **Shobhit Pandey** [shobhit-pandey](https://github.com/shobhit-pandey) 
-```
+* **Shobhit Pandey** [shobhit-pandey](https://github.com/shobhit-pandey)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
