@@ -34,7 +34,7 @@ Any new thought are always welcome here
 ## Authors
 
 ```
-* **Shobhit Pandey** [shobhit-pandey](https://github.com/shobhit-pandey)
+* **Shobhit Pandey** [shobhit-pandey](https://github.com/shobhit-pandey) 
 ```
 
 ## License
